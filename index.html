@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Misión Netiqueta · 3.º ESO</title>
+<style>
+:root{--bg1:#e0f2fe;--bg2:#f8fafc;--bg3:#dcfce7;--card:#fff;--ink:#172033;--muted:#64748b;--blue:#2563eb;--teal:#0f9f8f;--ok:#15803d;--bad:#b91c1c;--line:#dbe4f0;--soft:#f8fafc}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2) 55%,var(--bg3));color:var(--ink);min-height:100vh}.wrap{max-width:1000px;margin:auto;padding:22px}.top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:16px}.brand h1{margin:0;font-size:clamp(30px,5vw,48px)}.brand p{margin:5px 0 0;color:var(--muted)}.badge{background:#0f172a;color:white;border-radius:999px;padding:9px 14px;font-weight:800;white-space:nowrap}.progress{height:12px;border-radius:999px;background:#dce5ef;overflow:hidden;margin:18px 0 24px}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--teal));transition:width .25s ease}.card{background:rgba(255,255,255,.97);border:1px solid #dbeafe;border-radius:22px;padding:28px;box-shadow:0 16px 42px rgba(15,23,42,.11)}.hidden{display:none!important}.center{text-align:center}.pill{display:inline-block;background:#e0f2fe;color:#075985;border-radius:999px;padding:7px 12px;font-weight:800;font-size:14px}.stage-title{font-size:28px;margin:9px 0 5px}.stage-sub{color:var(--muted);margin:0 0 18px}.question{font-size:22px;line-height:1.38;margin:14px 0}.answer-grid{display:grid;gap:12px;margin-top:18px}button{border:0;border-radius:12px;padding:13px 17px;font-size:16px;font-weight:800;cursor:pointer;transition:transform .15s ease,border-color .15s ease,background .15s ease}button:hover:not(:disabled){transform:translateY(-1px)}button:disabled{cursor:default;opacity:.75}.primary{background:var(--blue);color:#fff}.secondary{background:#e2e8f0;color:#0f172a}.answer{background:var(--soft);border:2px solid #dbe4f0;text-align:left;color:var(--ink)}.answer:hover{border-color:#60a5fa;background:#eff6ff}.answer.correct{border-color:#22c55e;background:#dcfce7}.answer.wrong{border-color:#ef4444;background:#fee2e2}input[type=text]{width:min(100%,470px);font-size:18px;padding:14px 15px;border:2px solid #cbd5e1;border-radius:12px;outline:none}input[type=text]:focus{border-color:var(--blue)}.rules{max-width:720px;margin:20px auto;text-align:left;line-height:1.55}.rule{display:flex;gap:10px;margin:9px 0}.emoji{font-size:23px}.sequence{display:grid;gap:10px;margin:18px 0}.seq-item{display:flex;align-items:center;gap:12px;background:#f8fafc;border:2px solid #cbd5e1;border-radius:14px;padding:13px}.seq-num{width:34px;height:34px;border-radius:50%;background:#dbeafe;color:#1d4ed8;display:grid;place-items:center;font-weight:900;flex:none}.seq-text{flex:1}.move-group{display:flex;gap:7px}.move-btn{padding:8px 11px;background:#dbeafe;color:#1e3a8a}.pair-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}.pair-col h3{margin-top:0}.pair-list{display:grid;gap:10px}.pair-card{border:2px solid #cbd5e1;background:#fff;color:#172033;text-align:left;min-height:72px}.pair-card.selected{border-color:#2563eb;background:#eff6ff}.pair-card.matched{border-color:#22c55e;background:#dcfce7;color:#166534}.status{min-height:24px;margin-top:16px;font-weight:800}.status.ok{color:var(--ok)}.status.bad{color:var(--bad)}.notice{margin-top:18px;padding:13px 15px;border-radius:12px;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;font-weight:700}.overlay{position:fixed;inset:0;background:rgba(15,23,42,.72);display:grid;place-items:center;padding:20px;z-index:100}.modal{max-width:520px;width:100%;background:white;border-radius:22px;padding:28px;text-align:center;box-shadow:0 25px 70px rgba(0,0,0,.28)}.modal .boom{font-size:54px}.modal h2{margin:4px 0 8px}.certificate{border:8px double #0f172a;background:#fffdf5;padding:42px;border-radius:8px;text-align:center;max-width:900px;margin:auto}.certificate h2{font-family:Georgia,serif;font-size:46px;margin:0 0 10px}.certificate .name{font-size:34px;color:#1d4ed8;font-weight:900;margin:18px 0}.certificate .seal{font-size:56px}.small{font-size:14px;color:var(--muted)}.footer-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}.scoreline{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.mini{background:#f1f5f9;border-radius:999px;padding:7px 11px;font-size:14px;font-weight:800;color:#334155}
+@media(max-width:760px){.top{align-items:flex-start;flex-direction:column}.card{padding:19px}.pair-layout{grid-template-columns:1fr}.certificate{padding:24px}.certificate h2{font-size:36px}}
+@media print{body{background:#fff}.no-print,.top,.progress,.overlay{display:none!important}.wrap{max-width:none;padding:0}.card{border:0;box-shadow:none;padding:0}.certificate{page-break-inside:avoid;margin-top:15mm}}
+</style>
+
+<meta name="theme-color" content="#2563eb">
+<meta name="description" content="Misión Netiqueta: juego educativo de 3.º ESO sobre convivencia y ciudadanía digital.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg">
+<link rel="apple-touch-icon" href="icon.svg">
+
+</head>
+<body>
+<div class="wrap">
+  <div class="top no-print">
+    <div class="brand"><h1>🛡️ Misión Netiqueta</h1><p>Respeto, privacidad y convivencia digital · 3.º ESO</p></div>
+    <div id="stageBadge" class="badge">Inicio</div>
+  </div>
+  <div class="progress no-print"><div id="progressBar" class="bar"></div></div>
+
+  <section id="start" class="card center">
+    <span class="pill">Computación y Robótica</span>
+    <h2>¿Preparado/a para la misión?</h2>
+    <p>Completa todos los retos. Cada acierto suma puntos y al final obtendrás una calificación de 0 a 10.</p>
+    <input id="studentName" type="text" maxlength="70" autocomplete="name" placeholder="Nombre y apellidos">
+    <div class="rules">
+      <div class="rule"><span class="emoji">🧠</span><span><b>Reto 1:</b> 8 preguntas de decisión digital.</span></div>
+      <div class="rule"><span class="emoji">🧩</span><span><b>Reto 2:</b> ordenar un protocolo ante un mensaje ofensivo.</span></div>
+      <div class="rule"><span class="emoji">🎴</span><span><b>Reto 3:</b> lotto de emparejamiento entre norma y ejemplo.</span></div>
+      <div class="rule"><span class="emoji">🏆</span><span><b>Final:</b> diploma personalizado e imprimible.</span></div>
+    </div>
+    <button id="startBtn" class="primary">Comenzar misión</button>
+  </section>
+
+  <section id="quiz" class="card hidden">
+    <span class="pill">Reto 1 · Preguntas</span>
+    <h2 class="stage-title">Radar de netiqueta</h2>
+    <p class="stage-sub">Elige la mejor respuesta.</p>
+    <div class="scoreline"><span id="questionCounter" class="mini"></span><span id="liveScore" class="mini">Puntuación: 0,00 / 10</span></div>
+    <div id="qBox"></div>
+  </section>
+
+  <section id="puzzle" class="card hidden">
+    <span class="pill">Reto 2 · Puzle</span>
+    <h2 class="stage-title">Ordena el protocolo</h2>
+    <p class="stage-sub">Has recibido un mensaje ofensivo en un grupo de clase. Coloca las acciones en el orden más adecuado.</p>
+    <div id="sequence" class="sequence"></div>
+    <button id="checkPuzzleBtn" class="primary">Comprobar orden</button>
+  </section>
+
+  <section id="lotto" class="card hidden">
+    <span class="pill">Reto 3 · Lotto</span>
+    <h2 class="stage-title">Norma ↔ ejemplo</h2>
+    <p class="stage-sub">Selecciona primero una norma y después su ejemplo. Cada pareja acertada al primer intento suma puntos; si fallas, podrás corregirla y continuar.</p>
+    <div class="pair-layout">
+      <div class="pair-col"><h3>Normas</h3><div id="rulesCol" class="pair-list"></div></div>
+      <div class="pair-col"><h3>Ejemplos</h3><div id="examplesCol" class="pair-list"></div></div>
+    </div>
+    <div id="lottoStatus" class="status"></div>
+  </section>
+
+  <section id="final" class="card hidden">
+    <div class="certificate">
+      <div class="seal">🏅</div>
+      <h2>Diploma de Netiqueta</h2>
+      <p>Se concede a</p>
+      <div id="certName" class="name"></div>
+      <p>por haber completado la <b>Misión Netiqueta</b>, demostrando conocimientos sobre respeto, privacidad, verificación de información y convivencia digital.</p>
+      <p><b>3.º ESO · Computación y Robótica</b></p>
+      <p style="font-size:24px;margin:18px 0"><b>Calificación final: <span id="certScore"></span> / 10</b></p>
+      <p id="certLevel"></p>
+      <p id="certDate"></p>
+      <p class="small">Colegio Séneca · Actividad de competencia digital</p>
+    </div>
+    <div class="footer-actions no-print"><button id="printBtn" class="primary">🖨️ Imprimir / Guardar PDF</button><button id="againBtn" class="secondary">🔄 Jugar de nuevo</button></div>
+  </section>
+</div>
+
+<script>
+"use strict";
+
+const questions=[
+{q:"En un grupo de clase, una persona escribe un mensaje con TODO EN MAYÚSCULAS. ¿Qué suele transmitir?",a:["Que el mensaje es más importante","Que está gritando o mostrando un tono agresivo","Que escribe de forma más correcta","Que protege mejor su privacidad"],c:1},
+{q:"Antes de reenviar una foto de un compañero o compañera, ¿qué debes hacer?",a:["Reenviarla si está en un grupo privado","Pedir permiso a la persona que aparece","Borrar el nombre del archivo","Mandarla solo a amistades"],c:1},
+{q:"Recibes una noticia sorprendente sin fuente. ¿Cuál es la mejor actuación?",a:["Compartirla rápido antes de que la borren","Buscar si aparece en fuentes fiables","Añadir un emoji de duda y reenviarla","Publicarla y preguntar si es verdad"],c:1},
+{q:"¿Cuál de estos mensajes respeta mejor la netiqueta?",a:["NO TIENES NI IDEA","Eso es una tontería","No estoy de acuerdo; ¿puedes explicar tu argumento?","Paso de discutir contigo"],c:2},
+{q:"Si alguien te provoca en una red social, lo más adecuado suele ser…",a:["Responder inmediatamente con el mismo tono","Compartir su perfil para que otras personas respondan","Evitar escalar el conflicto, guardar pruebas y bloquear o reportar si procede","Crear otra cuenta para responder"],c:2},
+{q:"¿Qué dato conviene proteger especialmente en Internet?",a:["Tu color favorito","Tu contraseña","El nombre de una asignatura","Tu videojuego favorito"],c:1},
+{q:"Si cometes un error en un mensaje que ha molestado a alguien, ¿qué es lo más adecuado?",a:["Borrarlo y fingir que no ocurrió","Culpar al autocorrector","Reconocerlo, disculparte y aclarar tu intención","Responder con un meme"],c:2},
+{q:"¿Qué significa pensar antes de publicar?",a:["Escribir más despacio","Valorar si el contenido puede dañar, identificar o avergonzar a alguien","Publicar solo por la noche","Usar siempre filtros"],c:1}
+];
+
+const correctPuzzle=[
+"No responder impulsivamente.",
+"Guardar una captura o prueba si el mensaje es grave.",
+"Bloquear o silenciar a la persona si es necesario.",
+"Informar a una persona adulta o responsable si la situación continúa."
+];
+
+const lottoPairs=[
+{id:"privacidad",rule:"Privacidad",example:"No compartir contraseñas ni datos personales."},
+{id:"respeto",rule:"Respeto",example:"Discrepar sin insultar ni ridiculizar."},
+{id:"verificacion",rule:"Verificación",example:"Comprobar la fuente antes de compartir información."},
+{id:"consentimiento",rule:"Consentimiento",example:"Pedir permiso antes de publicar una foto ajena."}
+];
+
+const QUIZ_POINT = 5 / questions.length;
+const PUZZLE_POINT = 2 / correctPuzzle.length;
+const LOTTO_POINT = 3 / lottoPairs.length;
+
+let state={
+  student:"",
+  qIndex:0,
+  quizScore:0,
+  puzzleScore:0,
+  lottoScore:0,
+  puzzleItems:[],
+  selectedRule:null,
+  matched:new Set(),
+  lottoTried:new Set(),
+  locked:false
+};
+
+const $=id=>document.getElementById(id);
+
+function shuffle(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function show(id){
+  ["start","quiz","puzzle","lotto","final"].forEach(x=>$(x).classList.add("hidden"));
+  $(id).classList.remove("hidden");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function setProgress(pct,label){
+  $("progressBar").style.width=Math.max(0,Math.min(100,pct))+"%";
+  $("stageBadge").textContent=label;
+}
+
+function totalScore(){
+  return Math.max(0,Math.min(10,state.quizScore+state.puzzleScore+state.lottoScore));
+}
+
+function formatScore(v){
+  return v.toFixed(2).replace(".",",");
+}
+
+function updateLiveScore(){
+  const el=$("liveScore");
+  if(el) el.textContent=`Puntuación: ${formatScore(totalScore())} / 10`;
+}
+
+function resetState(keepName=true){
+  const name=keepName?state.student:"";
+  state={
+    student:name,qIndex:0,quizScore:0,puzzleScore:0,lottoScore:0,
+    puzzleItems:[],selectedRule:null,matched:new Set(),lottoTried:new Set(),locked:false
+  };
+  $("studentName").value=name;
+  show("start");
+  setProgress(0,"Inicio");
+}
+
+function startGame(){
+  const n=$("studentName").value.trim().replace(/\s+/g," ");
+  if(n.length<2){$("studentName").focus();return;}
+  state.student=n;
+  state.qIndex=0;
+  state.quizScore=0;
+  state.puzzleScore=0;
+  state.lottoScore=0;
+  state.locked=false;
+  show("quiz");
+  renderQuestion();
+}
+
+function renderQuestion(){
+  const q=questions[state.qIndex];
+  $("questionCounter").textContent=`Pregunta ${state.qIndex+1} de ${questions.length}`;
+  $("qBox").innerHTML=`
+    <div class="question">${q.q}</div>
+    <div class="answer-grid">
+      ${q.a.map((x,i)=>`<button class="answer" data-answer="${i}">${String.fromCharCode(65+i)}. ${x}</button>`).join("")}
+    </div>
+    <div id="questionFeedback" class="status"></div>`;
+  document.querySelectorAll("[data-answer]").forEach(btn=>
+    btn.addEventListener("click",()=>answerQuestion(Number(btn.dataset.answer),btn))
+  );
+  updateLiveScore();
+  setProgress(8+Math.round((state.qIndex/questions.length)*38),`Reto 1 · ${state.qIndex+1}/${questions.length}`);
+}
+
+function answerQuestion(i,btn){
+  if(state.locked)return;
+  const q=questions[state.qIndex];
+  state.locked=true;
+  const buttons=[...document.querySelectorAll("[data-answer]")];
+  buttons.forEach(b=>b.disabled=true);
+
+  if(i===q.c){
+    state.quizScore+=QUIZ_POINT;
+    btn.classList.add("correct");
+    $("questionFeedback").textContent=`Correcto. +${formatScore(QUIZ_POINT)} puntos`;
+    $("questionFeedback").className="status ok";
+  }else{
+    btn.classList.add("wrong");
+    const correctBtn=buttons.find(b=>Number(b.dataset.answer)===q.c);
+    if(correctBtn) correctBtn.classList.add("correct");
+    $("questionFeedback").textContent="Incorrecto. Esta pregunta suma 0 puntos.";
+    $("questionFeedback").className="status bad";
+  }
+
+  updateLiveScore();
+  setTimeout(()=>{
+    state.qIndex++;
+    state.locked=false;
+    if(state.qIndex<questions.length) renderQuestion();
+    else startPuzzle();
+  },900);
+}
+
+function startPuzzle(){
+  show("puzzle");
+  setProgress(52,"Reto 2");
+  do{state.puzzleItems=shuffle(correctPuzzle);}
+  while(state.puzzleItems.every((x,i)=>x===correctPuzzle[i]));
+  renderPuzzle();
+}
+
+function renderPuzzle(){
+  $("sequence").innerHTML=state.puzzleItems.map((x,i)=>`
+    <div class="seq-item">
+      <div class="seq-num">${i+1}</div>
+      <div class="seq-text">${x}</div>
+      <div class="move-group">
+        <button class="move-btn" data-up="${i}" ${i===0?"disabled":""}>▲</button>
+        <button class="move-btn" data-down="${i}" ${i===state.puzzleItems.length-1?"disabled":""}>▼</button>
+      </div>
+    </div>`).join("");
+  document.querySelectorAll("[data-up]").forEach(b=>b.addEventListener("click",()=>moveItem(Number(b.dataset.up),-1)));
+  document.querySelectorAll("[data-down]").forEach(b=>b.addEventListener("click",()=>moveItem(Number(b.dataset.down),1)));
+}
+
+function moveItem(i,dir){
+  const j=i+dir;
+  if(j<0||j>=state.puzzleItems.length)return;
+  [state.puzzleItems[i],state.puzzleItems[j]]=[state.puzzleItems[j],state.puzzleItems[i]];
+  renderPuzzle();
+}
+
+function checkPuzzle(){
+  let correctPositions=0;
+  state.puzzleItems.forEach((x,i)=>{if(x===correctPuzzle[i]) correctPositions++;});
+  state.puzzleScore=correctPositions*PUZZLE_POINT;
+
+  const old=$("puzzleFeedback");
+  if(old) old.remove();
+  const fb=document.createElement("div");
+  fb.id="puzzleFeedback";
+  fb.className=correctPositions===correctPuzzle.length?"status ok":"status bad";
+  fb.innerHTML=`Has colocado correctamente <b>${correctPositions} de ${correctPuzzle.length}</b> pasos. Puntuación del puzle: <b>${formatScore(state.puzzleScore)} / 2</b>.`;
+  $("checkPuzzleBtn").insertAdjacentElement("afterend",fb);
+
+  $("checkPuzzleBtn").disabled=true;
+  document.querySelectorAll(".move-btn").forEach(b=>b.disabled=true);
+  setTimeout(startLotto,1200);
+}
+
+function startLotto(){
+  state.selectedRule=null;
+  state.matched=new Set();
+  state.lottoTried=new Set();
+  state.locked=false;
+  show("lotto");
+  setProgress(72,"Reto 3");
+  renderLotto();
+}
+
+function renderLotto(){
+  const examples=shuffle(lottoPairs);
+  $("rulesCol").innerHTML=lottoPairs.map(p=>`
+    <button class="pair-card ${state.matched.has(p.id)?"matched":""}" 
+      data-rule="${p.id}" ${state.matched.has(p.id)?"disabled":""}>${p.rule}</button>`).join("");
+  $("examplesCol").innerHTML=examples.map(p=>`
+    <button class="pair-card ${state.matched.has(p.id)?"matched":""}" 
+      data-example="${p.id}" ${state.matched.has(p.id)?"disabled":""}>${p.example}</button>`).join("");
+
+  $("lottoStatus").textContent=state.selectedRule
+    ?"Ahora selecciona el ejemplo correspondiente."
+    :"Selecciona una norma para comenzar.";
+  $("lottoStatus").className="status";
+
+  document.querySelectorAll("[data-rule]").forEach(b=>
+    b.addEventListener("click",()=>selectRule(b.dataset.rule,b))
+  );
+  document.querySelectorAll("[data-example]").forEach(b=>
+    b.addEventListener("click",()=>selectExample(b.dataset.example))
+  );
+}
+
+function selectRule(id,btn){
+  if(state.matched.has(id))return;
+  state.selectedRule=id;
+  document.querySelectorAll("[data-rule]").forEach(b=>b.classList.remove("selected"));
+  btn.classList.add("selected");
+  $("lottoStatus").textContent="Ahora selecciona el ejemplo correspondiente.";
+  $("lottoStatus").className="status";
+}
+
+function selectExample(id){
+  if(!state.selectedRule){
+    $("lottoStatus").textContent="Primero debes seleccionar una norma.";
+    $("lottoStatus").className="status bad";
+    return;
+  }
+
+  const ruleId=state.selectedRule;
+
+  if(id===ruleId){
+    if(!state.lottoTried.has(ruleId)){
+      state.lottoScore+=LOTTO_POINT;
+      $("lottoStatus").textContent=`¡Pareja correcta al primer intento! +${formatScore(LOTTO_POINT)} puntos`;
+    }else{
+      $("lottoStatus").textContent="Pareja correcta. Como hubo un intento previo incorrecto, esta pareja suma 0 puntos.";
+    }
+    state.matched.add(ruleId);
+    state.selectedRule=null;
+    $("lottoStatus").className="status ok";
+    setProgress(72+state.matched.size*7,"Reto 3");
+    updateLiveScore();
+
+    if(state.matched.size===lottoPairs.length){
+      setTimeout(completeGame,850);
+    }else{
+      setTimeout(renderLotto,650);
+    }
+  }else{
+    state.lottoTried.add(ruleId);
+    $("lottoStatus").textContent="No corresponde. Puedes volver a intentarlo; esta pareja ya no sumará puntos.";
+    $("lottoStatus").className="status bad";
+    state.selectedRule=null;
+    setTimeout(renderLotto,900);
+  }
+}
+
+function levelText(score){
+  if(score>=9) return "Nivel: Excelente dominio de la netiqueta.";
+  if(score>=7) return "Nivel: Buen dominio de la netiqueta.";
+  if(score>=5) return "Nivel: Dominio básico adecuado de la netiqueta.";
+  return "Nivel: Conviene seguir practicando las normas de netiqueta.";
+}
+
+function completeGame(){
+  const score=totalScore();
+  show("final");
+  setProgress(100,"Misión completada");
+  $("certName").textContent=state.student;
+  $("certScore").textContent=formatScore(score);
+  $("certLevel").textContent=levelText(score);
+  $("certDate").textContent="Fecha: "+new Date().toLocaleDateString("es-ES",{day:"2-digit",month:"long",year:"numeric"});
+}
+
+$("startBtn").addEventListener("click",startGame);
+$("studentName").addEventListener("keydown",e=>{if(e.key==="Enter")startGame();});
+$("checkPuzzleBtn").addEventListener("click",checkPuzzle);
+$("printBtn").addEventListener("click",()=>window.print());
+$("againBtn").addEventListener("click",()=>resetState(false));
+resetState(false);
+</script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch(()=>{});
+  });
+}
+</script>
+
+</body>
+</html>
