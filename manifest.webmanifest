@@ -1,0 +1,19 @@
+{
+  "name": "Misión Netiqueta",
+  "short_name": "Netiqueta",
+  "description": "Juego educativo de netiqueta para 3.º ESO.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f7fb",
+  "theme_color": "#2563eb",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
